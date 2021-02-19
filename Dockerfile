@@ -15,4 +15,5 @@ RUN npm install --production
 RUN ls -al -R
 
 # CMD [ "pm2-runtime", "start", "pm2.json" ]
+ENTRYPOINT ["sh", "/usr/local/bin/docker-entrypoint.sh"]
 CMD [ "npm run start", "package.json" ]
