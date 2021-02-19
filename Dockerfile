@@ -5,7 +5,7 @@ FROM node:latest
 RUN mkdir -p /home/nodeDemojs
 
 # Bundle APP files
-COPY ../docker-demo /home/nodeDemojs
+COPY ./src /home/nodeDemojs
 # COPY package.json .
 # COPY pm2.json .
 
@@ -25,4 +25,4 @@ WORKDIR /home/nodeDemojs
 # CMD [ "npm run start", "package.json" ]
 
 # 容器启动时执行的命令，类似npm run start
-CMD ["node", "/home/nodeDemojs/src/app.js"]
+CMD ["node", "/home/nodeDemojs/app.js"]
