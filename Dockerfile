@@ -5,7 +5,7 @@ FROM node:latest
 RUN mkdir -p /home/nodeDemojs
 
 # Bundle APP files
-COPY ./docker-demo /home/nodeDemojs
+COPY ../docker-demo /home/nodeDemojs
 # COPY package.json .
 # COPY pm2.json .
 
