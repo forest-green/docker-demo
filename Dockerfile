@@ -1,10 +1,10 @@
 # FROM keymetrics/pm2:latest-alpine
 FROM node:latest
 
-# 执行命令，创建文件夹
+# 执行命令，创建文件夹 此处路径其实不用进行创建，在下一步的copy时，如果没有此文件，会自动在路径下创建文件
 RUN mkdir -p /home/nodeDemojs
 
-# Bundle APP files
+# Bundle APP files 
 COPY ./src /home/nodeDemojs
 
 
